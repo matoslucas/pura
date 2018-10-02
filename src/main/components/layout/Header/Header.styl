@@ -1,0 +1,137 @@
+$page-header-height = 100px
+$page-header-logo-font-size = 30px
+$page-header-nav-font-size = 16px
+
+.header
+  position: relative
+  -webkit-transform: translate3d(0, 0, 0)
+  z-index: 1000
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: space-between
+  transition: background 0.3s $bezier-cubic
+
+  // .header__logo
+  &__logo
+    flex: 0 1 auto
+
+    //.header__logo-link
+    &-image
+      display: block
+
+      @media $sm-up
+        svg 
+          height: 47px
+
+      @media $xs-only
+        svg 
+          height: 37px
+
+  // .header__nav-toggle-container
+  &__nav-toggle-container
+    flex: 0 1 auto
+
+    @media $nav-breakpoint
+      display: none
+
+  // ..header__nav-toggle
+  &__nav-toggle
+    display: block
+    position: relative
+    width: 40px
+    height: 40px
+    cursor: pointer
+    border-radius: 5px
+    background-color: transparent
+
+    &:hover, &:focus
+      background-color: alpha(white, 20%)
+
+    // .header__nav-toggle-text
+    &-text
+      font-size: 0
+
+    // .header__nav-toggle-icon
+    &-icon,
+    &-icon:before,
+    &-icon:after
+      position: absolute
+      content: ""
+      width: 20px
+      height: 1px
+
+    &-icon
+      top: 50%
+      left: 10px
+      background-color: white
+
+      &:before
+        top: -6px
+        background-color: white
+        transform-origin: center
+        //transition: transform 0.3s $bezier-cubic
+
+      &:after
+        top: 6px
+        background-color: white
+        transform-origin: center
+        //transition: transform 0.3s $bezier-cubic
+
+    // .header__nav-toggle--open
+    &--open
+      & ^[-1]-icon
+        background: none
+
+        &:before
+          transform: translateY(6px) rotateZ(45deg)
+
+        &:after
+          transform: translateY(-6px) rotateZ(-45deg)
+
+  // .header__nav
+  &__nav-container
+    flex: 1 0 100%
+
+    @media $nav-breakpoint
+      flex: 1 1 auto
+
+  //.header-main
+  &-main
+    padding: 30px 30px 30px
+
+    .header-nav
+      margin-top: 30px
+
+    @media $nav-breakpoint
+      padding: 50px 60px 30px
+
+      .header-nav
+        margin-top: 0
+
+    // .header--menu-open
+    ^[0]--menu-open
+      background: alpha(#363636, 100%)
+
+      .header-nav
+        background: alpha(#363636, 100%)
+
+
+  //.header-shop
+  &-shop
+    padding: 25px 30px 20px
+    background: #363636
+
+    .header-nav
+      margin-top: 20px
+
+    @media $nav-breakpoint
+      padding: 25px 60px 20px
+
+      .header-nav
+        margin-top: 0px
+
+
+    ^[0]--menu-open
+      .header-nav
+        background: #363636

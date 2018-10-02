@@ -1,0 +1,172 @@
+.header-nav
+  position: absolute
+  width: 100%
+  left: 0
+  padding: 20px 30px
+  background: transparent
+
+  transform-origin: top
+  transform: scaleY(0)
+  transition: all 0.3s $bezier-cubic
+
+  @media $nav-breakpoint
+    display: block
+    position: relative
+    padding: 0
+    box-shadow: none !important
+    transform: none
+    transition: none
+
+  // .header-nav--open
+  &--open
+    transform: scaleY(1)
+    box-shadow: 0 20px 20px 2px alpha(black, 0.4)
+
+
+  // .header-nav__list
+  &__list
+    list-style: none
+    padding: 0
+    margin: 0
+    text-align: right
+
+  // .header-nav__item
+  &__item
+    text-align: center
+
+    & + &
+      margin-top: 20px
+
+    @media $nav-breakpoint
+      display: inline-block
+
+      & + &
+        margin-top: 0
+        margin-left: 40px
+
+    // .header-nav__item-link
+    &-link
+      display: block
+      color: white
+      font-size: 0.8em
+      text-decoration: none
+      padding: 10px
+      cursor: pointer
+      user-select: none
+
+      &:hover, &:focus
+        color: $brand-primary
+
+        .inlineVector__shape
+          fill: $brand-primary
+        .inlineIcon
+          color: $brand-primary
+          border-color: $brand-primary
+
+      // .header-nav__item-link--home-page
+      &--home-page
+          border-bottom: 2px solid transparent
+
+        &:hover
+          border-bottom-color: white
+          color: white
+
+      // .header-nav__item-link--bigger
+      &--bigger
+        font-size: 0.87em
+
+      // .header-nav__item-link--button
+      &--button
+        font-size: 0.87em
+        padding: 12px 50px
+        border-radius: 45px
+        border: 1px solid white
+
+        &:hover, &:focus
+          border-color: $brand-primary
+          color: #333
+
+      // .header-nav__item-link--dark
+      &--dark
+        color: #222222
+        border-color: #222222
+
+    // .header-nav__item-text
+    &-text
+      display: inline-block
+
+    // .header-nav__item-icon
+    &-icon
+      vertical-align: middle
+      margin-left: 10px
+
+.header-dropdown
+  position: relative
+
+  // .header-dropdown__container
+  &__container
+    display: none
+    position: absolute
+    left: 50%
+    margin-top: 10px
+    transform: translateX(-50%)
+    min-width: 200px
+    text-align: left
+
+    background: white
+    border-radius: 10px
+    box-shadow: 0 10px 30px 0px alpha(black, 0.2)
+
+
+    ^[0].dropdown--active &
+      display: block
+
+  // .header-dropdown__info
+  &__info
+    padding: 15px 30px
+    border-bottom: 1px solid #CCC
+
+  // .header-dropdown__content
+  &__content
+    padding: 0
+    margin: 0
+    list-style: none
+
+  // .header-dropdown__arrow
+  &__arrow
+    position: absolute
+    content: ''
+    height: 0
+    width: 0
+    pointer-events: none
+
+    top: -20px
+    left: 50%
+    margin-left: -10px
+
+    border: solid transparent
+    border-bottom-color: white
+    border-width: 10px
+
+
+  // .header-dropdown__item
+  &__item
+    & + &
+      border-top: 1px solid #CCC
+
+  // .header-dropdown__link
+  &__link
+    display: block
+    cursor: pointer
+    padding: 15px 30px
+    color: #555
+    user-select: none
+    text-decoration: none
+
+    ^[0]__item:last-child &
+      border-bottom-left-radius: 10px
+      border-bottom-right-radius: 10px
+
+    &:hover, &:focus
+      color: $brand-primary
+      background: darken(white, 3%)

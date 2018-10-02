@@ -1,0 +1,41 @@
+.product-list
+  text-align: center
+
+  // .product-list__info
+  &__info
+    max-width: 600px
+    margin: 0 auto
+    padding: 0 14px
+
+  // .product-list__list
+  &__list
+    display: flex
+    flex-flow: row wrap
+    align-items: flex-start
+    justify-content: center
+    margin: 0 -5px
+
+    ^[0]__info + &
+      margin-top: 50px
+
+    // .product-list__list-item
+    &-item
+      flex: 1 1 auto
+      max-width: 300px
+      padding: 5px
+
+      @media $lg-up
+        max-width: 368px
+
+      @media $xs-only
+        max-width: 158px
+        padding: 3px
+
+
+// !!!!!!! TEMPORARY !!!!!!!!
+.products-recommended
+  margin-top: 50px
+
+.products-view
+  margin-top: 100px
+  margin-bottom: 50px

@@ -1,0 +1,28 @@
+$ie = false
+@import 'imports'
+
+.pura-web
+  position: relative
+  width: 100%;
+  min-height: 100vh;
+  display: flex
+  flex-flow: column nowrap
+  justify-content: stretch
+  filter: blur(0)
+  transition: filter 0.3s ease-out 
+
+  // .pura-web__container
+  &__container
+    flex: 1 0 auto
+
+  // .pura-web__section
+  &__section
+    margin: 80px 0
+
+.my-account
+  // .my-account__breadcrumbs
+  &__breadcrumbs
+    margin-bottom: 40px
+
+.pura-footer
+  flex: 0 1 auto

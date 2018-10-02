@@ -1,0 +1,7 @@
+diff a/src/main/containers/pages/Home/Home.js b/src/main/containers/pages/Home/Home.js	(rejected hunks)
+@@ -1,4 +0,4 @@
+-import React from 'react'
++import React, { Component, PropTypes } from 'react'
+ 
+ import SectionHero from '../../../components/layout/Landing/SectionHero'
+ import SectionFragrances from '../../../components/layout/Landing/SectionFragrances'

@@ -1,0 +1,121 @@
+$svg-radius = 50
+$stroke-width = 3
+$radius = $svg-radius - $stroke-width / 2
+$diameter = $radius * 2
+$pi = 3.14159
+$circumference = $pi * $diameter
+$revolution = 2500ms
+$color-steps = 4
+
+.circle-loader
+  margin 0px auto
+  display block
+  animation svg-rotate $revolution * $color-steps linear infinite
+
+  circle
+    fill transparent
+    stroke $brand-primary
+    stroke-width $stroke-width
+    stroke-dasharray 0, $circumference
+    animation stroke-dash $revolution linear infinite, stroke-width $revolution linear infinite, stroke-color $revolution * $color-steps steps($color-steps) infinite
+
+.btn .circle-loader-wrap
+  width 26px
+  display inline-block
+
+  .circle-loader
+    position absolute
+    margin-top -17px
+
+.table-admin .circle-loader circle
+  stroke $blue-light !important
+  stroke-width 2
+  animation stroke-dash $revolution linear infinite, stroke-width-small $revolution linear infinite, stroke-color-neutral $revolution * $color-steps steps($color-steps) infinite
+
+  
+.btn .circle-loader circle
+  stroke white !important
+  stroke-width 2
+  animation stroke-dash $revolution linear infinite, stroke-width-small $revolution linear infinite, stroke-color-white $revolution * $color-steps steps($color-steps) infinite
+
+.btn--disabled .circle-loader circle
+  stroke #7f899c !important
+  stroke-width 2
+  animation stroke-dash $revolution linear infinite, stroke-width-small $revolution linear infinite, stroke-color-gray $revolution * $color-steps steps($color-steps) infinite
+
+
+.preloader--boxed
+  display block
+  border-radius $radius-default
+  padding remify(20px) 0
+  background-color #f3f6f9
+
+@keyframes svg-rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes stroke-width {
+  0%, 100% {
+    stroke-width: 4;
+  }
+  45%, 55% {
+    stroke-width: 2;
+  }
+  50% {
+    stroke-width: 4;
+  }
+}
+
+@keyframes stroke-width {
+  0%, 100% {
+    stroke-width: 2;
+  }
+  45%, 55% {
+    stroke-width: 4;
+  }
+  50% {
+    stroke-width: 2;
+  }
+}
+
+@keyframes stroke-dash {
+  0% {
+    stroke-dasharray: 0, 301.59289;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 301.59289, 0;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 301.59289, 301.59289;
+    stroke-dashoffset: -301.59289;
+  }
+}
+
+@keyframes stroke-color {
+  from {
+    stroke $brand-primary
+  }
+}
+
+@keyframes stroke-color-white {
+  from {
+    stroke white
+  }
+}
+
+@keyframes stroke-color-neutral {
+  from {
+    stroke $brand-success
+  }
+}
+
+@keyframes stroke-color-gray {
+  from {
+    stroke #7f899c 
+  }
+}

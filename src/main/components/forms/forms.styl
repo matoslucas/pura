@@ -1,0 +1,215 @@
+.form
+  position: relative
+  margin: 0 auto
+  &__btn-final
+    margin: 0px
+  &__overlay
+    transition: 0.3s filter ease-out
+
+  // ********* SIZE MODIFIERS *********
+  &--450
+    max-width: 450px
+  
+  &--550
+    max-width: 550px
+
+  &--650
+    max-width: 650px
+
+  &--submitting
+    & ^[0]__overlay
+      position: relative
+      filter blur(2px)
+      user-select: none
+
+      &:after {
+        position: absolute
+        z-index: 999
+        content: ''
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: alpha(white, 50%)
+      }
+
+    pura-loader()
+
+  // ********* LAYOUT MODIFIERS *********
+  &--spaced
+    margin: 25px auto
+
+
+  // .form__info
+  &__info
+    text-align: center
+    padding: 0 10px
+
+    & + div
+      margin-top: 25px
+  
+  // .form__submit-message
+  &__submit-message 
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+
+    &--error
+      background: alpha($brand-danger, 10%);
+      color: $brand-danger;
+
+    &--success
+      background: alpha($brand-success, 10%);
+      color: $brand-success;
+
+  // ********* SECTION *********
+  // .form__section
+  &__section
+    margin: 0 auto
+    padding: 0 10px
+
+    & + &
+      margin-top: 25px  
+
+    // .form__section-wrapper
+    &-wrapper
+      display: flex
+      flex-flow: row wrap
+      align-items: baseline
+      margin: 0 -5px
+
+    // .form__section-heading
+    &-heading
+      margin: 0 0 1em 0
+      padding: 0 5px
+      font-size: 0.67em
+      color: #555555
+      text-transform: uppercase
+    
+    &--300
+      max-width: 300px
+    
+    &--350
+      max-width: 350px
+
+    &--400
+      max-width: 400px
+
+    &--450
+      max-width: 450px
+    
+    &--500
+      max-width: 500px
+
+    &--650
+      max-width: 650px
+
+
+  // ********* ITEM *********
+  // .form__item
+  &__item
+    padding: 0 5px
+
+    // Don't margin the .form__item--collapse
+    & + &:not(&--collapse)
+      margin-top: 20px
+
+
+    // .form__item--row
+    &--row
+      flex: 1 0 100%
+
+    // .form__item--column-N
+    // Different column widths
+    &--column-20
+      flex: 1 0 20%
+
+    &--column-30
+      flex: 1 0 30%
+
+    &--column-40
+      flex: 1 0 40%
+
+    &--column-50
+      flex: 1 0 50%
+
+    &--column-60
+      flex: 1 0 60%
+    
+    &--column-70
+      flex: 1 0 70%
+    
+    &--column-80
+      flex: 1 0 80%
+
+    // .form__item--center
+    &--center
+      text-align: center
+
+
+  // ********* GROUP *********
+  // .form__group
+  &__group
+    &--center
+      text-align: center
+      width: 100%
+
+    &--has-error
+      & ^[0]__input-container
+        border-color: red
+
+      & ^[0]__checkbox-label-agreeText
+        color: red;
+
+      & ^[0]__checkbox-label:before
+        border-color: red;
+
+      & ^[0]__error
+        color: red
+
+
+  // ********* SELECT *********
+  // .form__select
+  &__select
+    width: 100%
+
+    .Select-control
+      border: none
+      background: none
+
+      &:hover, &:focus
+        box-shadow: none
+
+
+  // ********* LABEL *********
+  // .form__label
+  &__label
+    display: table-cell
+    padding: 12px 20px
+    line-height: 20px
+    white-space: nowrap
+
+    // .form__label-text
+    &-text
+      display: inline-block
+      font-size: 0.75em
+
+    // .form__label-icon
+    &-icon
+      display: inline-block
+
+    &-text + &-icon
+      padding-left: 15px
+
+
+  // ********* ERROR *********
+  // .form__error
+  &__error
+    display: block
+    font-size: 0.75em
+    text-align: left
+    padding-left: 20px
+    padding-top: 3px
+
+  

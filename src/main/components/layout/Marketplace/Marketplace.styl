@@ -1,0 +1,54 @@
+.marketplace
+  display: table
+  width: 100%
+
+  // .marketplace__sidebar
+  &__sidebar
+    display: table-cell
+    vertical-align: top
+    min-width: 285px
+    border-right: 1px solid #CCCCCC
+    padding-right: 15px
+
+  // .marketplace__grid
+  &__grid
+    display: table-cell
+    width: 100%
+    //padding-left: 15px
+
+.queve
+  // .queve-breadcrumbs
+  &-breadcrumbs
+    margin: 40px 0px 0px 14px
+
+  // .queve-info
+  &-info
+    margin: 40px auto 0 auto
+    text-align: center
+    max-width: 650px
+  
+  // .queve-table
+  &-table
+    /*margin: 80px 0*/
+
+    // .queve-table__upgrade-action
+    &__upgrade-action
+      text-align: center
+      margin-top: 30px
+      margin-bottom: 30px;
+
+      @media $sm-up
+        /*padding-right: 70px*/
+
+      @media $md-up
+        /*text-align: right*/
+
+    // .queve-table__upgrade-info
+    &__upgrade-info
+      display: inline-block
+      padding: 0px 5px 20px 5px
+      font-size: 0.875em
+
+      @media $md-up
+        margin-right: 20px
+        padding-bottom: 0

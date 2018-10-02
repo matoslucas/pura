@@ -1,0 +1,47 @@
+.rating
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-between
+  align-items: center
+
+  // .rating__stars
+  &__stars  
+    flex: 0 1 auto
+    white-space: nowrap
+    font-size: 0
+
+  // .rating__info
+  &__info
+    flex: 1 0 auto
+    margin-left: 10px
+    line-height: 21px
+
+    &:empty
+      display: none
+
+    // .rating__info-text
+    &-text
+      font-size: 0.9em
+      line-height: 1em
+
+    // .rating__info-icon
+    &-icon 
+      margin-left: 5px
+
+      .inlineVector__svg
+        height: 10px
+
+  // .rating--interactive
+  &--interactive
+    & ^[0]__star-single
+      cursor: pointer
+
+    // Hover effect hack
+    & ^[0]__stars:hover
+      .inlineVector__shape
+        fill: $brand-primary
+    
+    & ^[0]__star-single
+      ^[0]__star-single:hover ~ ^[0]__star-single
+        .inlineVector__shape
+          fill: #FFBF35

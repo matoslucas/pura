@@ -1,0 +1,10 @@
+size($width, $height = false)
+    if length($width) == 2
+        width: $width[0]
+        height: $width[1]
+    else
+        width: $width
+        if $height
+            height: $height
+        else
+            height: $width

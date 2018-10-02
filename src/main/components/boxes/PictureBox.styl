@@ -1,0 +1,86 @@
+.picture-box
+  position: relative
+  overflow: hidden
+
+  // .picture-box__banner
+  &__banner
+    width: 180px;
+    background: #FFF;
+    color: $brand-primary
+    position: absolute;
+    text-align: center;
+    top: 20px;
+    left: -45px;
+    line-height: 50px;
+    font-weight: bold
+    font-size: 14px
+    transform: rotate(-45deg);
+    z-index: 10
+    @media $xs-only
+        width: 172px;
+        left: -48px;
+        line-height: 32px;
+
+  // .picture-box__container
+  &__container
+    position: relative
+    display: block
+
+    &:hover, &:focus
+      & ^[0]__heading
+        transform: translateY(5px)
+
+      & ^[0]__mask
+        opacity: 0.5
+
+  // .picture-box__img
+  &__img
+    display: block
+    width: 100%
+    height: auto
+
+  // .picture-box__content
+  &__content
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 2
+
+    display: flex
+    align-items: center
+    align-content: center
+
+  &__mask
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1
+    opacity: 1
+
+    background: alpha(black, 0.3)
+    transition: opacity 0.3s $bezier-cubic
+
+  // .picture-box__heading
+  &__heading
+    flex: 1 1 auto
+    color: white
+    text-align: center
+    font-size: 1.6em
+
+    transition: transform 0.3s $bezier-cubic
+
+    @media $lg-up
+      font-size: 41px
+
+    @media $xs-only
+      font-size: 18px
+
+  // .picture-box__action
+  &__action
+    position: absolute
+    top: 20px
+    right: 20px

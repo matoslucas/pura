@@ -1,0 +1,49 @@
+.sub-nav
+  text-align: center
+
+  // .sub-nav__item
+  &__item
+    display: inline-block
+    color: #222222
+    text-decoration: none
+    text-transform: capitalize
+    font-weight: 600
+    font-size: 0.87em
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    cursor: pointer
+    padding: 15px 5px
+    margin: 0 10px
+    border-bottom: 2px solid transparent
+    text-transform: uppercase
+
+    &:hover, &:focus
+      border-color: $brand-primary
+
+    // .sub-nav__item--active
+    &--active
+      color: $brand-primary
+      border-color: $brand-primary
+    
+    // .sub-nav__item--disabled
+    &--disabled
+      cursor: default
+      color: #AAAAAA
+      
+      &:hover, &:focus 
+        border-color: transparent
+
+  // ********** SUB NAV TYPES **********
+  // .sub-nav--primary
+  &--primary
+    border-bottom: 1px solid #E3E3E3
+
+  // .sub-nav--secondary
+  &--secondary
+    ^[0]__item
+      padding: 10px 5px
+      font-size: 0.75em
+      border-bottom-width: 4px
+
+      &--active
+        color: #222222

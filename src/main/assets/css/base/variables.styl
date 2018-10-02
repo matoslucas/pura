@@ -1,0 +1,98 @@
+/*------------------------------------*\
+    VARIABLES
+\*------------------------------------*/
+
+/*
+ * FONT
+ */
+$font-size = 1.5rem
+$font-regular = Arial, sans-serif
+$font-custom = 'Montserrat', Arial, sans-serif
+
+/*
+ * COLORS
+ */
+$brand-primary ?=       #18CEA0
+$brand-success ?=       #5cb85c
+$brand-info ?=          #5bc0de
+$brand-warning ?=       #f0ad4e
+$brand-danger ?=        #d9534f
+$body-bg =              white
+
+$color-white = #fff
+$color-black = #000
+$color-grey = #464646
+$color-grey-light = #bbbbbb
+$color-grey-bg = #f8f8f8
+$color-text-default = #989898
+$color-warning = #ff0000
+
+$color-success = #79C562
+$color-info = #5583AD
+$color-error = #D42222
+/*
+ * MEDIA QUERIES
+ */
+$xs-up = 'screen and (min-width: 20em)' // 320px
+$xs-only = $xs-up + ' and (max-width: 47.938em)'
+$sm-up = 'screen and (min-width: 48em)' // 768px
+$sm-only = $sm-up + ' and (max-width: 63.938em)'
+$md-up = 'screen and (min-width: 64em)' // 1024px
+$md-only = $md-up + ' and (max-width: 78.063em)'
+$lg-up = 'screen and (min-width: 78.125em)' // 1250px
+$lg-only = 'screen and (min-width: 119.938em)'
+$xlg-up = 'screen and (min-width: 120em)' // 1920px
+
+// Specific breakpoints
+$nav-breakpoint = 'screen and (min-width: 640px)'
+
+$screen-xxs =                  320px;
+$screen-xs-min =              $screen-xs;
+$screen-phone =               $screen-xs-min;
+
+$screen-sm =                  767px;
+$screen-sm-min =              $screen-sm;
+$screen-tablet =              $screen-sm-min;
+
+$screen-md =                  1024px;
+$screen-md-min =              $screen-md;
+$screen-desktop =             $screen-md-min;
+
+$screen-lg =                  1250px;
+$screen-lg-min =              $screen-lg;
+$screen-lg-desktop =          $screen-lg-min;
+
+$screen-xs-max =              ($screen-sm-min - 1);
+$screen-sm-max =              ($screen-md-min - 1);
+$screen-md-max =              ($screen-lg-min - 1);
+/*
+/*
+ * RADIUS
+ */
+$radius-default = 3px;
+
+/*
+ * GRID
+ */
+$grid-columns ?=              12
+$grid-gutter-width ?=         30px
+$grid-float-breakpoint ?=     $screen-sm-min
+$grid-float-breakpoint-max ?= ($grid-float-breakpoint - 1)
+
+/*
+ * CONTAINER
+ */
+$container-tablet ?=           (720px + $grid-gutter-width)
+$container-sm ?=               $container-tablet
+
+$container-desktop ?=          (940px + $grid-gutter-width)
+$container-md ?=               $container-desktop
+
+$container-large-desktop ?=    (1200px + $grid-gutter-width)
+$container-lg ?=               $container-large-desktop
+
+
+/*
+ * BEZIER EASING
+ */
+ $bezier-cubic = cubic-bezier(0.645, 0.045, 0.355, 1.000)

@@ -1,0 +1,48 @@
+$image-root = '../img/'
+
+inline-image($image)
+    inline-url($image)
+
+
+image-width($image)
+    image-size($image)[0]
+
+
+image-height($image)
+    image-size($image)[1]
+
+
+image-url($image)
+    url($image-root + $image)
+
+
+tile($image, $inline = false, $scale = 1)
+    width: image-width($image)*$scale
+    height: image-height($image)*$scale
+
+    if $scale != 1
+        background-size: cover
+
+    if $inline
+        background-image: inline-image($image)
+    else
+        background-image: image-url($image)
+
+svg-bg($image, $tile = false, $scale = 1)
+    $image = $image-root + $image
+
+    $svg = $image + '.svg'
+    $png = $image + '.png'
+
+    background-repeat: no-repeat
+    background-image: image-url($svg)
+
+    if $tile
+        width: image-width($svg)*$scale
+        height: image-height($svg)*$scale
+
+    if $scale != 1
+        background-size: image-width($svg)*$scale image-height($svg)*$scale
+
+    .no-svg &
+        background-image: image-url($png)

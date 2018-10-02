@@ -1,0 +1,209 @@
+.btn
+  display: inline-block
+  border-radius: 45px
+  font-size: 14px
+  font-weight: 700
+  line-height: 25px
+  padding: 8px 35px
+  text-align: center;
+  margin: 10px
+  cursor: pointer
+  user-select: none
+
+  color: #888888
+
+  &:hover, &:focus
+    color: black
+
+  text-decoration: none
+  border: 1px solid transparent
+
+  // .btn__icon positioning
+  &__icon + &__text,
+  &__text + &__icon
+    padding-left: 10px
+
+  &__icon
+    vertical-align: middle
+    line-height: 0
+
+  &__text
+    vertical-align: initial
+    display: inline-block
+
+  &:hover, &:focus
+    outline: none
+
+
+  // ============== Sizing ==============
+  &--fat
+    padding: 8px 75px
+
+  &--block
+    //display: table
+    text-align: center
+    width: 100%
+    margin: 10px 0
+
+    & ^[0]__icon
+      display: table-cell
+      width: 1px
+
+    & ^[0]__text
+      display: table-cell
+      width: 100%
+      text-align: center
+      padding-left: 0 !important
+
+  &--pull-left
+    float: left
+
+  &--pull-right
+    float: right
+
+  &--no-margin
+    margin: 0
+
+  // ============== Colors ==============
+  &--primary
+    color: white
+    background: $brand-primary
+
+    &:hover, &:focus
+      background: darken($brand-primary, 15%)
+      color: white
+
+  &--secondary
+    color: $brand-primary
+    background: white
+
+    &:hover, &:focus
+      background: darken(white, 5%)
+      color: darken($brand-primary, 5%)
+
+  &--outline
+    color: $color-grey-light
+    border: 1px solid $color-grey-light
+  
+  &--outline-green
+    color: #18cea0
+    border: 1px solid #18cea0
+
+    &:hover, &:focus
+      color: darken($color-grey-light, 15%)
+      border-color: darken($color-grey-light, 15%)
+
+  &--outline-white
+    color: white
+    border: 1px solid white
+
+    &:hover, &:focus
+      background: white;
+      color: darken(white, 40%)
+
+      g
+        fill: darken(white, 20%)
+
+  &--shadow
+    box-shadow: 0 10px 30px 0px alpha(black, 0.2)
+
+  &--shadow-on-hover:hover,
+  &--shadow-on-hover:focus
+    box-shadow: 0 10px 30px 0px alpha(black, 0.2)
+
+
+  // ============== Special buttons ==============
+  // .btn--twitter
+  &--twitter
+    padding-left: 25px
+
+    .btn__icon
+      padding-right: 15px
+
+    .btn__text
+      padding-left: 15px
+      border-left: 1px solid alpha(white, 0.3)
+
+    color: white
+    background: #50ABF1
+
+    &:hover, &:focus
+      background: darken(#50ABF1, 8%)
+      color: white
+
+  // .btn--facebook
+  &--facebook
+    padding-left: 25px
+
+    .btn__icon
+      padding-right: 15px
+
+    .btn__text
+      padding-left: 15px
+      border-left: 1px solid alpha(white, 0.3)
+
+    color: white
+    background: #5F6EDC
+
+    &:hover, &:focus
+      background: darken(#5F6EDC, 8%)
+      color: white
+
+  // .btn--google
+  &--google
+    padding-left: 25px
+
+    .btn__icon
+      padding-right: 15px
+
+    .btn__text
+      padding-left: 15px
+      border-left: 1px solid alpha(#ababab, 0.3)
+
+    color: #888888
+    background: #ffffff
+    border: solid 0.5px #e3e3e3
+
+    &:hover, &:focus
+      background: darken(#ffffff, 8%)
+      color: #333333
+
+
+  // ==============  Pure Icon buttons ==============
+  &--icon
+    padding: 0
+    margin: 0
+    font-size: 0
+    width: 45px
+    height: 45px
+    line-height: 45px
+    text-align: center
+
+  &--icon-big
+    padding: 0
+    margin: 0
+    font-size: 0
+    width: 60px
+    height: 60px
+    line-height: 60px
+    text-align: center
+
+
+  // ============== Text buttons ==============
+  &--link
+    color: $color-grey-light
+    text-transform: uppercase
+    padding: 8px 0
+    margin: 0
+
+  &--link-white
+      color: alpha(white, 0.9)
+
+      & .inlineVector__shape
+        fill: alpha(white, 0.5)
+
+      &:hover, &:focus
+        color: white
+
+        .inlineVector__shape
+          fill: white

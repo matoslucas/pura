@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="89px" height="84px" viewBox="0 0 89 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>Untitled</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" sketch:type="MSPage">
+        <g id="calendar" sketch:type="MSLayerGroup">
+            <g id="Page-1">
+                <g id="Group">
+                    <g id="Icn-2" transform="translate(0.000000, 7.000000)">
+                        <rect id="Rectangle-47" fill="#C3B4FB" sketch:type="MSShapeGroup" x="0" y="0" width="89" height="47" rx="9"></rect>
+                        <rect id="Rectangle-47" fill="#7D5DFB" sketch:type="MSShapeGroup" x="0" y="30" width="89" height="47" rx="9"></rect>
+                        <rect id="Rectangle-47" fill="#7D5DFB" sketch:type="MSShapeGroup" x="0" y="24" width="89" height="45" rx="1"></rect>
+                        <g id="31" transform="translate(27.000000, 30.000000)" font-size="31.2835539" font-family="Avenir Next" fill="#FFFFFF" sketch:type="MSTextLayer" font-weight="420">
+                            <text>
+                                <tspan x="0.318365396" y="31">31</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <path d="M61,2.99253976 C61,1.33980569 62.3488159,0 64.0057983,0 L68.9942017,0 C70.6542582,0 72,1.35292554 72,2.99253976 L72,15.0074602 C72,16.6601943 70.6511841,18 68.9942017,18 L64.0057983,18 C62.3457418,18 61,16.6470745 61,15.0074602 L61,2.99253976 L61,2.99253976 Z" id="Rectangle-954-Copy-5" fill="#7D5DFB" sketch:type="MSShapeGroup"></path>
+                    <path d="M16,2.99253976 C16,1.33980569 17.3488159,0 19.0057983,0 L23.9942017,0 C25.6542582,0 27,1.35292554 27,2.99253976 L27,15.0074602 C27,16.6601943 25.6511841,18 23.9942017,18 L19.0057983,18 C17.3457418,18 16,16.6470745 16,15.0074602 L16,2.99253976 L16,2.99253976 Z" id="Rectangle-954-Copy-5" fill="#7D5DFB" sketch:type="MSShapeGroup"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,76 @@
+.form__checkbox
+  // .form__checkbox-container
+  &-container
+    padding: 20px 0px 0px 0px;
+
+  // .form__checkbox-wrapper
+  &-wrapper
+    position: relative
+    user-select: none
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  // .form__checkbox-input
+  &-input
+    position absolute
+    width 0
+    height 0
+    visibility hidden
+    text-indent -9999px
+
+    &:checked + ^[0]-label
+      & ^[0]-label-icon
+        opacity: 1
+        transform: scale(1)
+
+      &:before
+        background: $brand-primary
+        border-color: $brand-primary
+
+
+  // .form__checkbox-label
+  &-label
+    display: flex;
+    padding-left: 35px
+    padding-top: 6px
+
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 25px
+      height: 25px
+      background: #F8F8F8
+      border: 1px solid #E3E3E3
+      border-radius: 7px
+
+      transition: border-color 0.15s $bezier-cubic, background 0.15s $bezier-cubic
+
+    // .form__checkbox-label-icon
+    &-icon
+      position: absolute
+      top: 8px
+      left: 6px
+      opacity: 0
+      transform: scale(0)
+      transform-origin: center center
+
+      transition: transform 0.3s $bezier-cubic
+
+      .inlineVector__svg
+        width: auto;
+        height: 10px;
+
+    // .form__checkbox-label-text
+    &-text
+      color: #555555
+      font-size: 0.81em
+      font-weight: 600
+    
+    &-agreeText  
+      color: #aaa
+      font-size: 12px
+      font-weight: 600
+

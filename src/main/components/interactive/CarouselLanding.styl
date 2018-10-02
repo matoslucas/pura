@@ -1,0 +1,38 @@
+.carousel__slider
+
+  .slide-arrow
+    border: none
+    margin: 0
+    padding: 0
+    width: auto
+    overflow: visible
+    background: transparent
+    color: inherit
+    font: inherit
+    line-height: normal
+    width: 15px
+    height: 28px
+    background-repeat: no-repeat
+    font: 0/0 a
+    cursor: pointer
+    opacity: 0.6
+    background-size: contain
+
+    @media $sm-up
+      width: 30px
+      height: 55px
+
+    &:hover, &:focus
+      opacity: 1
+
+  .slide-arrow__next
+    background-image: image-url('carousel/arrow-right.png')
+
+  .slide-arrow__prev
+    background-image: image-url('carousel/arrow-left.png')
+
+  .slide-arrow__next.slide-arrow--inverted
+    background-image: image-url('carousel/arrow-right-dark.png')
+
+  .slide-arrow__prev.slide-arrow--inverted
+    background-image: image-url('carousel/arrow-left-dark.png')

@@ -1,0 +1,221 @@
+.queve-item
+  position: relative
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  background: white
+
+  // ************** DRAG & DROP SPECIFIC **************
+  // .queve-item--dragged
+  &--dragged
+    //display: none
+    opacity: 0.5
+    border: none
+    background: white
+
+  // .queve-item__drop
+  &__drop
+    & ^[0]__wrapper
+      padding: 0
+      border: solid 2px #fff
+     
+
+    &--droppable
+      visibility: visible
+      & ^[0]__wrapper
+        padding: 15px
+        border-bottom: 1px solid #CCCCCC
+    
+    // .queve-item__drop--hover
+    &--droppable&--hover
+      & ^[0]__wrapper
+        border: 3px dashed #CCC
+        border-radius: 10px
+        padding: 40px
+
+  // .queve-item--empty
+  &--empty
+    & ^[0]__wrapper
+      display: block
+      text-align: center
+      padding: 25px 0
+      border-top: 1px solid #CCCCCC
+      border-bottom: 1px solid #CCCCCC
+      color: $brand-primary
+      font-size: 0.87em
+
+  &--loading
+    & ^[0]__wrapper
+      display: block
+      text-align: center
+      padding: 100px 0
+      border-top: 1px solid #CCCCCC
+      border-bottom: 1px solid #CCCCCC
+
+      pura-loader()
+
+
+  // .queve-item--table-head
+  &--table-head
+    & ^[0]__wrapper 
+      border: none
+
+      & > *
+        font-size: 0.68em
+        text-transform: uppercase
+      
+
+    & ^[0]__name
+      margin-left: 50px
+
+  // .queve-item__orderNo
+  &__orderNo, &__state
+    flex: 0 1 auto
+    text-align: center
+    min-width: 50px
+
+  // .queve-item__state
+  &__state
+    display: none
+    min-width: 70px
+
+    @media $sm-up
+      display: inline-block
+
+    .inlineVector__svg
+      width: 35px
+
+  // .queve-item__position
+  &__position
+    display: none
+    width: 30px
+    text-align: center
+
+    @media $sm-up
+      display: inline-block
+
+  // .queve-item__wrapper
+  &__wrapper
+    flex: 1 0 auto
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    padding: 10px
+    border: 1px solid #CCCCCC
+    margin: 1px 0px 1px 0px
+
+  //  .queve-item__green-box
+  &__green-box
+    flex: 1 0 auto
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    padding: 10px
+    border: 1px solid #18cea0
+    background-color: rgba(24, 206, 160, 0.05)
+    margin: 1px 0px 1px 0px
+
+  //  .queve-item__red-box
+  &__red-box
+    flex: 1 0 auto
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    padding: 10px
+    border: 1px solid #ff7272
+    background-color: rgba(249, 6, 6, 0.05)
+    margin: 1px 0px 1px 0px
+
+    & > *
+      flex: 0 1 auto
+      color: #555555
+      font-size: 0.85em
+      font-weight: 600
+
+  // .queve-item__image
+  &__image
+    width: 50px
+    height: 50px
+
+    @media $xs-only
+      max-width: 20px
+      width: 20px
+      height: 20px
+
+  // .queve-item__name
+  &__name
+    width: 25%
+    padding: 0 20px
+    flex-grow: 1
+
+    @media $md-up
+      flex-grow: 0
+    @media $xs-only
+      flex-grow: 1
+      width: 98px
+      font-size: 14px
+
+  // .queve-item__date
+  &__date
+    word-wrap: break-word
+
+    @media $sm-up
+      width: 25%
+      flex-grow: 0
+    @media $xs-only
+      width: 80px
+      flex-grow: 0
+      font-size: 14px
+
+  // .queve-item__type
+  &__type
+    display: none
+    width: 75px
+    text-align: center
+
+    @media $md-up
+      display: inline-block
+
+  // .queve-item__rating
+  &__rating
+    display: none
+    padding: 0 90px
+
+    @media $md-up
+      display: inline-block
+  
+    // .queve-item__rating-head
+    &-head
+      display: inline-block
+      width: 80px
+      text-align: center
+
+  // .queve-item__date-info
+  &__date-info
+    padding-left: 0.5em
+    color: $brand-primary
+
+  // .queve-item__action
+  &__action
+    flex-grow: 1
+    text-align: right
+
+    @media $sm-up
+      width: 25%
+      flex-grow: 0
+    @media $xs-only
+      width: 95px
+      flex-grow: 0
+      font-size: 14px
+
+    // .queve-item__action-trigger
+    &-trigger
+      display: inline-block
+      vertical-align: middle
+      padding: 10px
+      font-size: 0
+      cursor: pointer
+
+    // .queve-item__action-icon
+    &-icon
+      padding: 0

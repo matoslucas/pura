@@ -1,0 +1,15 @@
+# todo provide .env secure way
+# .env
+.idea/
+tsrc/
+node_modules/
+coverage/
+dist/
+*.iml
+webpack-assets.json
+webpack-stats.json
+npm-debug.log
+.happypack
+.DS_Store
+/.vscode/settings.json
+/config.codekit

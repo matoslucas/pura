@@ -1,0 +1,71 @@
+.product-detail
+  // .product-detail__container
+  &__container
+    padding: 50px 0
+    display: table
+    width: 100%
+
+  // .product-detail__column
+  &__column
+    text-align: center
+    
+    & + &
+      margin-top: 50px
+
+    @media $sm-up
+      display: table-cell
+      text-align: left
+
+      & + &
+        margin-top: 0px
+
+      // .product-detail__column--2
+      &--2
+        width: 16.66666666%
+
+      // .product-detail__column--3
+      &--3
+        width: 25%
+
+      // .product-detail__column--6
+      &--6
+        width: 50%
+
+        // .product-detail__column--6
+      &--8
+        width: 83.333333333%
+
+  // .product-detail__heading
+  &__heading
+    margin: 0 0 20px 0
+    color: #222222
+    text-transform: uppercase
+    font-weight: 600
+    font-size: 0.87em
+
+  // .procut-detail__list
+  &__list
+    margin: 0px 42px
+    padding: 0
+    text-align: left
+
+    // .product-detail__list-item
+    &-item
+      list-style: none
+      color: #555555
+      font-size: 0.87em
+      margin: 0
+      text-transform: capitalize
+
+      & + &
+        margin-top: 10px
+
+  // .product-detail__text
+  &__text
+    color: #555555
+    font-size: 0.87em
+    line-height: 1.8em
+
+    ul
+      list-style: none
+      text-align: left

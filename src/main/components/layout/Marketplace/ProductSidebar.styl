@@ -1,0 +1,43 @@
+.sidebar
+  $sidebar-padding = 30px
+
+  // .sidebar__section
+  &__section
+    height: 61px
+    overflow: hidden
+    & + &
+      border-top: 1px solid #E3E3E3
+
+    //.sidebar__section--active
+    &--active
+      height: auto
+
+    // .sidebar__section-header
+    &-header
+      display: flex
+      flex-flow: row nowrap
+      align-items: center
+      padding: 20px $sidebar-padding
+
+      cursor: pointer
+
+    // .sidebar__section-heading
+    &-heading
+      flex: 1 0 auto
+      color: #222222
+      font-size: 0.87em
+      font-weight: 600
+      text-transform: uppercase
+
+      // .sidebar__section-heading-icon
+      &-icon
+        // Active section
+        ^[0]__section--active &
+          transform: rotateZ(180deg)
+
+        .inlineVector__svg
+          height: 13px
+  
+  // .sidebar__item
+  &__item
+    padding: 0 $sidebar-padding

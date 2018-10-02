@@ -1,0 +1,42 @@
+triangle($width = 10px, $height = 10px, $direction = 'bottom', $color = #000)
+
+    // Base triangle styles
+    width 0
+    height 0
+    background 0
+    border-style solid
+    content ''
+    display inline-block
+
+    // Styles for each direction
+    if $direction == 'top'
+        border-width: 0 ($width * .5) $height ($width * .5)
+        border-color: transparent transparent $color transparent
+
+    if $direction == 'topRight'
+        border-width: 0 $width $height 0
+        border-color: transparent $color transparent transparent
+
+    if $direction == 'right'
+        border-width: ($height * .5) 0 ($height *.5) $width
+        border-color: transparent transparent transparent $color
+
+    if $direction == 'bottomRight'
+        border-width: 0 0 $height $width
+        border-color: transparent transparent $color transparent
+
+    if $direction == 'bottom'
+        border-width: $height ($width * .5) 0 ($width * .5)
+        border-color: $color transparent transparent transparent
+
+    if $direction == 'bottomLeft'
+        border-width: $width 0 0 $height
+        border-color: transparent transparent transparent color
+
+    if $direction == 'left'
+        border-width: ($height * .5) $width ($height * .5) 0
+        border-color: transparent $color transparent transparent
+
+    if $direction == 'topLeft'
+        border-width: $height $width 0 0
+        border-color: $color transparent transparent transparent

@@ -1,0 +1,37 @@
+.counter
+  // .counter__btn
+  &__btn
+    display: inline-block
+    vertical-align: middle
+    width: 30px
+    height: 30px
+    margin: 0 5px
+    border-radius: 100%
+    background: white
+    box-shadow: 0 1px 2px 0 alpha(black, 30%)
+    cursor: pointer
+    user-select: none
+
+    text-align: center
+    font-size: 25px
+    line-height: 27px
+    font-weight: 300
+
+    &:hover, &:focus
+      background: darken(white, 5%)
+
+  // .counter__count
+  &__count
+    display: inline-block
+    vertical-align: middle
+    font-size: 1em
+    color: #222222
+    padding: 0 10px
+
+    user-select: none
+
+  // .counter--bold
+  &--big
+    ^[0]__count
+      font-weight: 700
+  

@@ -1,0 +1,110 @@
+.info-box
+  // Positioning
+  &__icon + &__heading
+    margin-top: 20px
+
+  &__heading + &__text
+    margin-top: 10px
+
+  &__icon + &__text
+    margin-top: 10px
+
+  &__icon + &__smallText
+    margin-top: 10px
+
+  // .info-box__heading
+  &__heading
+    margin: 0
+    color: lighten(black, 20%)
+
+  // *********** INFOBOX MODIFIERS ***********
+  // .info-box--big
+  &--big
+    & ^[0]__heading
+      font-size: 18px
+      color: #363636
+      font-weight: 600
+
+      @media $sm-up
+        font-size: 30px
+
+    & ^[0]__text
+      font-size: 16px
+      line-height: 1.8em
+      color: rgba(0, 0, 0, 0.4)
+      font-weight: 500
+
+    & ^[0]__heading + ^[0]__text
+      margin-top: 20px
+
+  // *********** INFOBOX MODIFIERS ***********
+  // .info-box--medium
+  &--medium
+    & ^[0]__heading
+      font-size: 18px
+      color: #363636
+      font-weight: 600
+
+      @media $sm-up
+        font-size: 24px
+
+    & ^[0]__text
+      font-size: 16px
+      line-height: 1.8em
+      color: rgba(0, 0, 0, 0.4)
+      font-weight: 500
+
+    & ^[0]__heading + ^[0]__text
+      margin-top: 20px
+
+  // .info-box--white
+  &--white
+    & ^[0]__heading
+      color: darken(white, 10%)
+
+    & ^[0]__text
+      color: darken(white, 20%)
+
+  // .info-box--center
+  &--center
+    text-align: center
+
+  // .info-box--650
+  &--650
+    max-width: 650px
+    margin: 0 auto
+
+  &__section--free-plan-text
+    margin: 0 auto;
+    padding: 0 10px;
+
+    > h4
+      font-family: Montserrat;
+      font-size: 28px;
+      font-weight: bolder;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #363636;
+      margin-bottom: 20px;
+
+    > .info-box__text
+      text-align:center;
+      background-color: #ff388c;
+      padding: 10px 0;
+      width:100%;
+      font-weight: 700;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #ffffff;
+      max-width: 550px;
+
+    > .info-box__smallText
+      text-align:center;
+      color: aaaaaa;
+      font-size: 14px;
+      margin-top: 10px;

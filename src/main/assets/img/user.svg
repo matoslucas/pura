@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="122px" height="122px" viewBox="0 0 122 122" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="60" cy="60" r="60"></circle>
+        <circle id="path-3" cx="60" cy="60" r="60"></circle>
+    </defs>
+    <g id="My-account" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" transform="translate(-352.000000, -212.000000)">
+        <g id="Group-5" transform="translate(353.000000, 213.000000)">
+            <g id="Group-4">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#F6F6F6" xlink:href="#path-1"></use>
+                <g mask="url(#mask-2)" stroke="#AAAAAA" stroke-linejoin="round">
+                    <g transform="translate(14.000000, 23.000000)">
+                        <path d="M33.8947368,54 L33.8947368,67.5619089 L9.64063158,76.2146389 C3.85915789,78.2798796 0,83.7501075 0,89.8781169 L0,99 L92,99 L92,89.8781169 C92,83.7501075 88.1408421,78.2798796 82.3593684,76.2146389 L58.1052632,67.5619089 L58.1052632,54" id="Shape" fill="#FFFFFF" fillRule="evenodd"></path>
+                        <ellipse id="Oval" fill="#FFFFFF" fillRule="evenodd" cx="46" cy="29" rx="24" ry="29"></ellipse>
+                        <path d="M70,26.3450261 C69.1845485,26.4492458 68.6214986,26.4145059 67.8011932,26.5782796 C59.5350389,28.2060908 54.2248963,25.1440191 49.6768126,17 C46.9440793,22.3499406 38.4061078,26.5782796 31.3971079,26.5782796 C27.9460006,26.5782796 24.9754272,25.8537051 22,24.2655965" id="Shape" fill="none"></path>
+                    </g>
+                </g>
+            </g>
+            <mask id="mask-4" fill="white">
+                <use xlink:href="#path-3"></use>
+            </mask>
+            <use id="Mask" stroke="#AAAAAA" xlink:href="#path-3"></use>
+        </g>
+    </g>
+</svg>

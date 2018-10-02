@@ -1,0 +1,58 @@
+.product-info
+  padding: 50px 0
+
+  @media $sm-up
+    padding: 100px 0
+
+  // DEV
+  // .product-info__container
+  &__container
+    @media $sm-up
+      display: table
+      width: 100%
+
+  // .product-info__content
+  &__content
+    margin: 20px 5px 0px 5px
+
+    @media $sm-up
+      display: table-cell
+      vertical-align: middle
+      width: 60%
+      padding-left: 100px
+      margin-top: 0
+
+  // .product-info__image
+  &__image
+    @media $sm-up
+      display: table-cell
+      width: 40%
+
+  // .product-info__heading
+  &__heading
+    color: #222222
+    font-size: 1.87em
+    margin: 20px 0 0 0
+  
+  // .product-info__rating
+  &__rating
+    margin-top: 5px
+
+  // .product-info__text
+  &__text
+    color: #3B3630
+    font-size: 0.9em
+    line-height: 1.7em
+    margin-top: 20px
+
+  // .product-info__action
+  &__action
+    margin-top: 40px
+    text-align: center
+
+    @media $sm-up
+      text-align: left
+
+    // .product-info__action-counter
+    &-counter
+      margin-bottom: 20px

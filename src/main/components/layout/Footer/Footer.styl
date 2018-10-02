@@ -1,0 +1,158 @@
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
+
+.footer
+  background: #222222
+
+  &.pura-footer
+    display: block
+
+  // .footer__panel
+  &__panel
+    width: 100%;
+    padding: 50px 25px !important;
+       
+    
+
+  // .footer__left
+  &__left
+    display: block;
+    float: left;
+    width: 70%;
+    /*margin-bottom: 50px;*/
+  &__right
+    display: block;
+    float: left;
+    width: 30%;
+    position:relative;
+    height: 90px;
+    text-align: right;
+
+  &__socialBox
+    position:absolute;
+    top: 45%;
+    right: 0;
+    //width:100%;
+
+  &__socialBox span
+    padding: 0 16px;
+    font-size: 32px;
+    color: #fff;
+
+  &__icon-small-twitter:hover
+    color: #1da1f2;
+
+  &__icon-small-instagram:hover
+    color: rgb(255,64,129);
+
+  &__icon-small-facebook:hover
+    color: #3b5998;  
+
+  &__icon-small-linkedin:hover
+    color: #0084bf;  
+
+
+  // .footer__info
+  &__info
+    display: table-cell
+    width: 160px
+    padding-right: 100px
+    position: relative;
+    -webkit-transform: translate3d(0, 0, 0)
+
+  &__info_logo
+    position: absolute;
+    display: block;
+    top: 45%;
+    bottom: 0;
+  
+
+    // .footer__info-text
+    &-text
+      margin-top: 20px
+      font-size: 0.9em
+      line-height: 1.4em
+
+  // .footer__navigation
+  &__navigation
+    display: table-cell
+    width: 50%
+
+    // .footer__navigation-container
+    &-container
+      display: table
+      width: 100%
+
+    // .footer__navigation-column
+    &-column
+      display: table-cell
+      width: 33%
+
+  // .footer__credits
+  &__credits
+    padding: 15px 0;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    float: left;
+    width: 100%;
+
+    // .footer__credits-container
+    &-container
+      display: table
+      width: 100%
+
+    // .footer__credits-column
+    &-column
+      display: table-cell
+      width: 50%
+
+      // .footer__credits-column--right
+      &--right
+        text-align: right
+        color: white
+        font-size: 0.8em
+        font-weight: 300
+
+ 
+
+  @media (min-width:320px) and (max-width:767px) 
+     &__panel
+      width: 100%;
+      padding: 15px 25px !important;
+     
+     &__info
+      width: 50%;
+      display: inline-block;
+      position: relative;
+      bottom: 100px;
+
+     &__navigation
+      width: 50%;
+      display: inline-block;
+     
+     &__socialBox
+      right: unset;
+
+     &__left
+      width: 100%;
+
+     &__right
+      width: 100%;  
+  
+  @media (min-width:768px) and (max-width:959px) 
+    &__left
+      width: 50%;
+
+    &__right
+      width: 50%;  
+
+
+
+  @media (min-width:960px) and (max-width:1024px) 
+    &__left
+      width: 50%;
+
+    &__right
+      width: 50%;  
+
+  
+   
+      

@@ -1,0 +1,90 @@
+.register
+  text-align: center
+  background: $color-grey-bg
+  padding: 80px 0
+
+  @media $sm-up
+    padding: 80px 100px
+
+  .container
+    padding: 0 40px
+
+  // .register__info
+  &__info
+    display: inline-block
+    padding: 0 15px
+
+    @media $sm-up
+      padding: 0
+
+    .info-box__text
+      max-width: 650px
+
+  // .register__offer
+  &__offer
+    padding: 50px 15px
+
+    @media $sm-up
+      display: table
+      width: 100%
+      padding: 50px 0
+
+    // .register__offer-column
+    &-column
+      padding: 0 40px
+
+      &:first-child
+        border-bottom: 1px solid #CCCCCC
+
+      @media $sm-up
+        display: table-cell
+        width: 50%
+        height: 100%
+        vertical-align: middle
+
+        &:first-child
+          border-bottom: none
+          border-right: 1px solid #CCCCCC
+
+
+    // .register__offer-benefits
+    &-benefits
+      margin: 0
+      padding: 20px 0
+      list-style: none
+      text-align: center
+
+      @media $sm-up
+        text-align: right
+        padding: 40px 0
+
+      // .register__offer-benefits-item
+      &-item
+        color: #333
+        font-size: 1em
+        font-weight: 500
+        padding: 5px 0
+
+    // .register__offer-price
+    &-price
+      color: #17CEA0
+      font-size: 1.5em
+      text-align: center
+      padding: 20px 0
+
+      @media $sm-up
+        padding: 0
+        font-size: 2.5em
+        text-align: left
+
+  // .register__action
+  &__action
+    & .btn--twitter
+      @media $md-up
+        margin-left: 24px
+
+    // .register__action-info
+    &-info
+      padding-top: 20px
+      font-size: 0.75em
+      color: #555555

@@ -1,0 +1,178 @@
+.account-item
+  display: flex
+  flex-flow: row wrap
+  align-items: flex-end
+
+  padding: 30px 0 15px 0
+  border-bottom: 1px solid #CCCCCC
+
+  // .account-item__heading
+  &__heading
+    flex: 1 0 100%
+    font-size: 0.68em
+    color: #555555
+    text-transform: uppercase
+    margin-bottom: 10px
+
+  // .account-item__content
+  &__content
+    flex: 1 0 auto
+    font-size: 0.875em
+    line-height: 20px
+    color: #777777
+
+  // .account-item__actions
+  &__actions
+    line-height: 20px
+    flex: 0 1 auto
+
+    &-link
+      display: inline-block
+      font-size: 0.75em
+      color: #2A93DB
+      text-decoration: none
+      cursor: pointer
+
+      & + &
+        padding-left: 10px
+        &:before
+          padding-right: 10px
+          content: "|"
+
+      &:hover, &:focus
+        text-decoration: underline
+.popups_models
+  border-radius:4px
+  .close-icon
+    background-color: #ffffff;
+    box-shadow: 0 0.5px 1px 0 rgba(0, 0, 0, 0.16);
+    border-radius:50%
+.subsciption-main
+  padding: 25px 100px
+  .info-box__text
+    font-size: 1.5em
+    color: #555
+  .pause_buutonbox
+    margin-top: 20px !important
+    margin-left: 90px !important
+
+
+.cancel-modal
+  padding: 25px 50px
+  text-align: center
+
+  .info-box
+    margin-bottom: 25px
+
+  .info-box__text
+    font-size: 14px
+
+  .help-section
+    margin-bottom: 20px
+
+  .help-text
+    font-size: 12px
+
+.cancel-modal__auth-form__actions
+  .form__section + &
+    margin-top: 20px
+    padding: 0
+
+  & > .form__section-wrapper
+    display: flex
+    flex-direction: row
+
+    .form__item
+      flex-basis: initial
+      text-align: left
+
+      &:first-child
+        flex-grow: 0
+
+      &:nth-child(2) .btn
+        padding: 0
+
+.cancel-model__error-message
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background: alpha($brand-danger, 10%);
+  color: $brand-danger;
+
+.cancel-modal__promo-code
+  font-weight: bold
+  color: $brand-primary
+
+.pause
+  padding: 25px 70px
+  .cancel--btn
+    color:#2a93db
+    font-weight:700
+  .Select-control
+    background-color: #f8f8f8;
+  .pause_selectbox
+    margin-top: 20px !important;
+  .pause_buutonbox
+    margin-top: 20px !important;
+    margin-left: 50px !important;
+  .pause__info__text
+    font-size: 0.65em
+    text-align: center
+    font-weight: normal
+    font-style: normal
+    font-stretch: normal
+    line-height: normal
+    letter-spacing: normal
+    color: #777777
+    width: 100%
+  .form__btn-final
+    width: auto;
+  .form__input-container
+    background: transparent
+    border: unset
+    width: 70%;
+    margin: 0 auto;
+  .duration
+    font-size:1.4em
+    .form__note-text
+      color: #363636
+      font-size: 17.5px
+      font-weight: normal
+      font-style: normal
+      font-stretch: normal
+      line-height: normal
+      letter-spacing: normal
+      text-align: center
+  .reminder-btn
+    padding: 8px 67px;
+  .subscription-btn
+    padding: 8px 64px;
+
+@media (min-width:400px) and (max-width:767px)
+  .pause
+    padding: 14px
+    .btn--fat
+      padding: 8px 45px
+    .form__item
+      padding: 0 0px
+      margin: 0 auto
+    .pause_buutonbox
+      margin-top: 20px !important
+      margin-left:0px !important
+@media (min-width:320px) and (max-width:400px)
+  .pause
+    padding: 10px
+    .btn--fat
+      padding: 8px 30px
+    .form__item
+      padding: 0 0px
+    .cancel--btn
+      color: #2a93db;
+      font-weight: 700;
+      padding: 8px 15px;
+    .form__item--column-50
+      -ms-flex: 1 0 50%;
+      flex: 1 0 45%;
+    .pause_buutonbox
+      margin-top: 20px !important
+      margin-left:0px !important

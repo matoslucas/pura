@@ -1,0 +1,318 @@
+.features
+  position: relative
+
+  .slick
+    &-list
+      overflow: hidden
+
+    &-arrow
+      position: absolute
+      z-index: 1
+      top: 50%
+      transform: translateY(-140%)
+
+      @media $sm-up
+        transform: translateY(-50%)
+
+    &-next
+      right: 20px
+
+      @media $sm-up
+        right: 40px
+
+    &-prev
+      left: 20px
+
+      @media $sm-up
+        left: 40px
+
+    &-dots
+      position: absolute
+      bottom: 40px
+      width: 100%
+      margin: 0
+      padding: 0
+      list-style: none
+      line-height: 0
+      text-align: center
+
+      li
+        display: inline-block
+        width: 8px
+        height: 8px
+        line-height: 9px
+        background: transparent
+        border: 1px solid #fff
+        border-radius: 100%
+        margin: 0 12px
+        cursor: pointer
+        overflow: hidden
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.6)
+
+        button
+          display: block
+          font-size: 0
+          background: 0
+          border: 0
+          outline: none
+
+        &:hover, &:focus
+          background: darken(white, 10%)
+
+        &.slick-active
+          background: rgba(0, 0, 0, 0.2)
+
+  .slide-arrow
+    border: none
+    margin: 0
+    padding: 0
+    width: auto
+    overflow: visible
+    background: transparent
+    color: inherit
+    font: inherit
+    line-height: normal
+    width: 15px
+    height: 28px
+    background-repeat: no-repeat
+    font: 0/0 a
+    cursor: pointer
+    opacity: 0.6
+    background-size: contain
+
+    @media $sm-up
+      width: 30px
+      height: 55px
+
+    &:hover, &:focus
+      opacity: 1
+
+  .slide-arrow__next
+    background-image: image-url('carousel/arrow-right.png')
+
+  .slide-arrow__prev
+    background-image: image-url('carousel/arrow-left.png')
+
+  .slide-arrow__next.slide-arrow--inverted
+    background-image: image-url('carousel/arrow-right-dark.png')
+
+  .slide-arrow__prev.slide-arrow--inverted
+    background-image: image-url('carousel/arrow-left-dark.png')
+
+.feature
+  position: relative
+  display: inline-flex
+  height: 100vh
+  width: 100%
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  color: #363636
+  padding: 60px 20px
+  min-height: 650px
+  max-height: 670px
+  overflow: hidden
+
+  @media $sm-up
+    min-height: 800px
+    max-height: 1200px
+    padding: 80px 20px
+
+  &__info
+    text-align: center
+    margin-bottom: 40px
+    position relative
+
+    @media $sm-up
+      margin-bottom: 20px
+
+    & .info-box__heading
+      font-size: 22px
+      color: inherit
+      line-height: 1.2em
+
+      @media $sm-up
+        font-size: 30px
+
+  &__content
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+    text-align: center
+    padding: 0 20px
+
+    @media $sm-up
+      flex-grow: 1
+      flex-direction: row
+      justify-content: center
+      align-items: center
+      text-align: left
+
+  &__image,
+  &__shim
+    flex-grow: 1
+
+    @media $sm-up
+      flex: 0 0 50%
+
+  &__image
+    display: none
+
+  &__icon
+    display: none !important
+    margin-bottom: 40px
+    position relative
+
+    @media $md-up
+      display: block !important
+
+  &__copy
+    font-size: 14px
+    line-height: 2em
+    fill: #fff
+    color: rgba(0, 0, 0, 0.6)
+    position relative
+
+    @media $sm-up
+      font-size: 18px
+      flex: 0 0 50%
+
+  &__text
+    margin-bottom: 30px
+
+    @media $sm-up
+      margin-bottom: 40px
+
+    & > p
+      color: inherit
+      font-size: inherit
+
+  &__actions
+    display: none
+
+    @media $sm-up
+      display: block
+
+  &--inverted
+    color: #fff
+
+    .feature__copy
+      color: rgba(255, 255, 255, 0.8)
+      line-height: 27px
+      font-weight: 700
+
+  &--light
+    background-size: cover
+    background-position: 50%
+    background-image: image-url('home-features/bg-light-mobile.jpg')
+
+    @media $sm-up
+      background-image: image-url('home-features/bg-light-desktop.jpg')
+
+    .feature__image
+      display: block
+      background-image: image-url('home-features/hand-light-mobile.png')
+      background-repeat: no-repeat
+      background-size: contain
+      width: 550px
+      height: 550px
+      position: absolute
+      bottom: 50%
+      left: 50%
+      transform: translate(-30%, 61%)
+
+      @media $sm-up
+        background-image: image-url('home-features/hand-light-mobile.png')
+        width: 1000px
+        height: 700px
+        transform: translate(-55%, 67%)
+
+      @media $lg-up
+        transform: translate(-55%, 0)
+        bottom: -10%
+
+  &--vials
+    background-size: cover
+    background-position: 50%
+    background-image: image-url('home-features/bg-vials-mobile.jpg')
+
+    @media $sm-up
+      background-image: image-url('home-features/bg-vials.jpg')
+
+    .feature__image
+      display: block
+      background-image: image-url('home-features/hand-vials-mobile.png')
+      background-repeat: no-repeat
+      background-size: contain
+      width: 725px
+      height: 550px
+      position: absolute
+      bottom: 50%
+      left: 50%
+      transform: translate(-66%, 62%)
+
+      @media $sm-up
+        transform: translate(-105%, 90%)
+
+      @media screen and (min-width: 1500px)
+        transform: translate(0, 0)
+        left: -10px
+        bottom: -10px
+
+  &--control
+    background-size: cover
+    background-position: 50%
+    background-image: image-url('home-features/bg-control.jpg')
+
+    .feature__image
+      display: block
+      background-image: image-url('home-features/hand-control-mobile.png')
+      background-repeat: no-repeat
+      background-size: contain
+      width: 550px
+      height: 550px
+      position: absolute
+      bottom: 50%
+      left: 50%
+      transform: translate(-53%, 61%)
+
+      @media $sm-up
+        background-image: image-url('home-features/hand-control.png')
+        width: 800px
+        height: 800px
+        transform: translate(-85%, 70%)
+
+      @media $lg-up
+        transform: translate(-85%, 0)
+        bottom: -20%
+
+  &--adjust
+    background-size: cover
+    background-position: 50%
+    background-image: image-url('home-features/bg-adjust-mobile.jpg')
+
+    @media $sm-up
+      background-image: image-url('home-features/bg-adjust-desktop.jpg')
+
+
+    .feature__image
+      display: block
+      background-image: image-url('home-features/hand-adjust-mobile.png')
+      background-repeat: no-repeat
+      background-size: contain
+      width: 550px
+      height: 550px
+      position: absolute
+      bottom: 50%
+      left: 50%
+      transform: translate(-53%, 61%)
+
+      @media $sm-up
+        background-image: image-url('home-features/hand-adjust.png')
+        width: 800px
+        height: 800px
+        transform: translate(-85%, 70%)
+
+      @media $lg-up
+        transform: translate(-85%, 0)
+        bottom: -20%

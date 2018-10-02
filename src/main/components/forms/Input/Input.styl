@@ -1,0 +1,42 @@
+.form__input
+
+  // .form__input-container
+  &-container
+    display: table
+    width: 100%
+    background: #F8F8F8
+    border: 1px solid #E3E3E3
+    border-radius: 5px
+    text-align: left
+    padding-left: 5px
+
+  // .form__input-wrapper
+  &-wrapper
+    display: table-cell
+    vertical-align: middle
+    width: 100%
+
+  // .form__input-element
+  &-element
+    width: 100%
+    background: none
+    border: none
+    padding: 8px 15px
+    color: #555555
+    border-radius: 3px !important
+
+    font-size: 0.87em
+    font-weight: 600
+    line-height: 20px
+
+    &::placeholder
+      color: #AAA
+      font-weight: 400
+
+    &:-webkit-autofill
+      // Autofill color CSS hack
+      box-shadow: 0 0 0 1000px white inset
+
+    &:focus, &:active
+      background: white
+      outline: none
